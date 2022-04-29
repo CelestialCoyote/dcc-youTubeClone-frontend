@@ -11,3 +11,164 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+/************************************************
+*
+* Non create-react-app css starts here.
+*
+************************************************/
+
+/***********************
+* App component.
+***********************/
+
+#main-container {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.centered {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 90%;
+}
+
+
+/***********************
+* TitleBar component.
+***********************/
+
+#title-bar {
+    background: cyan;
+    border: 1px solid black;
+    height: 4.0em;
+    width: 100%;
+}
+
+#title-bar-label {
+    float: left;
+    color: blueviolet;
+    font-family: fantasy;
+    font-size: 2.0em;
+    font-weight: 700;
+    padding-bottom: 0.0em;
+    padding-left: 1.0em;
+    padding-top: 0.5em;
+}
+
+
+/***********************
+* SearchBar component.
+***********************/
+
+#search-bar {
+    border: 2px solid black;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.0em;
+    margin-top: 1.0em;
+    padding: 0.5em;
+    width: 80%;
+}
+
+#search-label {
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
+    padding-top: 0.15em;
+    width: 6.0em;
+}
+
+#search-input {
+    background-color: yellow;
+    margin-left: 1.0em;
+    margin-right: 1.0em;
+    width: 100%;
+}
+
+
+/***********************
+* EditLibrary component.
+***********************/
+
+#add-song-form {
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.0em;
+    margin-top: 1.0em;
+    padding: 1.0em;
+    width: 80%;
+}
+
+.add-song-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.0em;
+    margin-top: 1.0em;
+}
+
+.add-song-input {
+    background-color: yellow;
+    width: 30%;
+}
+
+#add-song-button {
+    background-color: green;
+    border-radius: 0.5em;
+    color: yellow;
+    font-weight: bold;
+    width: 30%;
+}
+
+
+/***********************
+* MusicTable component.
+***********************/
+
+.styled-table {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    width: 80%;
+}
+
+.styled-table thead tr {
+    background-color: yellow;
+    color: purple;
+    text-align: center;
+}
+
+.styled-table tbody tr {
+    border-bottom: 2px solid green;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: orange;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: lightgreen;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid yellow;
+}
+
+.delete-button {
+    background-color: red;
+    border-radius: 0.5em;
+    color: yellow;
+    font-weight: bold;
+    width: 5.0em;
+}

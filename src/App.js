@@ -1,15 +1,16 @@
 import './App.css';
+import TitleBar from './components/TitleBar/TitleBar';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+        <TitleBar />
+        <VideoPlayer />
     </div>
   );
-}
+};
 
 
 export default App;
