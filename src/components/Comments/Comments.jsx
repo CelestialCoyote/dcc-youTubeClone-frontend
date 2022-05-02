@@ -1,25 +1,9 @@
-import useForm from '../../useForm';
-import axios from 'axios';
-import { API_KEY01 } from '../../API_KEYS';
+import useForm from "../../useForm";
 
 
-const SearchBar = (props) => {
+const Comments = (props) => {
 
-    const { formValues, handleChange, handleSubmit } = useForm(handleSearch);
-
-
-    async function handleSearch() {
-        try {
-            console.log(formValues);
-            await axios
-                .get(`https://www.googleapis.com/youtube/v3/search?q=${formValues.searchParams}&part=snippet&maxResults=10&key=${API_KEY01}`)
-                .then(r => {props.setRecommendedVideos(r.data.items)});
-            
-        } catch (error) {
-            console.log(error.message);
-        }
-    };
-
+    const { formValues, handleChange, handleSubmit } = useForm(props.handleSearch);
 
     return (
 
@@ -44,4 +28,4 @@ const SearchBar = (props) => {
 };
 
 
-export default SearchBar;
+export default Comments;
