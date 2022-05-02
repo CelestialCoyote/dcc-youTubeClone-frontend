@@ -13,7 +13,7 @@ const SearchBar = (props) => {
             console.log(formValues);
             await axios
                 .get(`https://www.googleapis.com/youtube/v3/search?q=${formValues.searchParams}&part=snippet&maxResults=10&key=${API_KEY01}`)
-                .then(r => {props.setRecommendedVideos(r.data.items)});
+                .then(r => {props.setYtResults(r.data.items)});
             
         } catch (error) {
             console.log(error.message);

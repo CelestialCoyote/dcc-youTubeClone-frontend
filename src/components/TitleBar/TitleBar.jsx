@@ -1,11 +1,11 @@
 import SearchBar from "../SearchBar/SearchBar";
 
 
-const TitleBar = ({setRecommendedVideos}) => {
+const TitleBar = ({setYtResults}) => {
     return ( 
         <div id='title-bar'>
             <label id='title-bar-label'>YouTubeClone</label>
-            <SearchBar setRecommendedVideos={setRecommendedVideos}/>
+            <SearchBar setYtResults={setYtResults}/>
         </div>
 
     );

@@ -6,13 +6,14 @@ import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 
 const App = () => {
 
-    const [recommendedVideos, setRecommendedVideos] = useState([]);
-
+    
+    const [currentVidID, setCurrentVidID] = useState('XCJwcNmGxRc');
+    const [ytResults, setYtResults] = useState([]);
 
   return (
     <div className="App">
-        <TitleBar setRecommendedVideos={setRecommendedVideos}/>
-        <VideoPlayer />
+        <TitleBar setYtResults={setYtResults} />
+        <VideoPlayer currentVidID={currentVidID} setYtResults={setYtResults} ytResults={ytResults} />
     </div>
   );
 };
