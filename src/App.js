@@ -17,7 +17,7 @@ const App = () => {
         <div className="App">
             <TitleBar setYtResults={setYtResults} />
             
-            <div className="flex-column">
+            <div className="flex-row">
                 <div id="mainPlayerComments">
                     <VideoPlayer currentVideoInfo={currentVideoInfo} currentVideoID={currentVideoID} />
                 </div>
