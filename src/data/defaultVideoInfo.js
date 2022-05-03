@@ -1,4 +1,4 @@
-const defaultVideo = [
+const defaultVideo =
     {
         "kind": "youtube#videoListResponse",
         "etag": "J7fPCRgS7IAGi9HwnSlR-Du0PiY",
@@ -80,4 +80,5 @@ const defaultVideo = [
             "resultsPerPage": 1
         }
     }
-]
+
+export default defaultVideo;

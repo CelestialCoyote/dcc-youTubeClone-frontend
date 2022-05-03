@@ -13,7 +13,7 @@ const VideoPlayer = (props) => {
                 frameBorder="0"
             />
             <div>
-                {props.ytResults.length > 0 ? <h2>Title: {props.ytResults[0].snippet.title}</h2> : props.currentVidID.title};
+                {<h2>Title: {props.currentVideoInfo.items[0].snippet.title}</h2>};
             </div>
             
         </div>

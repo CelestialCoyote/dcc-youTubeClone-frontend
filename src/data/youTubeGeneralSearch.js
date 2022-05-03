@@ -1,4 +1,4 @@
-const searchResults = [
+const searchResults = 
     {
         "kind": "youtube#searchListResponse",
         "etag": "soqOFRN6_UKnuI_WDw-xyQS4Er4",
@@ -351,4 +351,6 @@ const searchResults = [
             }
         ]
     }
-]
+
+
+export default searchResults;

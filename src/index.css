@@ -66,53 +66,26 @@ code {
 }
 
 
-/***********************
-* SearchBar component.
-***********************/
-
-#search-bar {
-    border: 2px solid black;
-    border-radius: 0.5em;
+.flex-column {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.0em;
-    margin-top: 1.0em;
-    padding: 0.5em;
-    width: 80%;
+    flex-direction: row;
 }
 
-#search-label {
-    background-color: yellow;
-    color: red;
-    font-weight: bold;
-    padding-top: 0.15em;
-    width: 6.0em;
+.flex-row {
+    display: flex;
+    flex-direction: row;
 }
 
-#search-input {
-    background-color: yellow;
-    margin-left: 1.0em;
-    margin-right: 1.0em;
-    width: 100%;
+#mainPlayerComments {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 
-
-/***********************
-* VideoPlayer component.
-***********************/
-
-.video-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-  }
-  
-  .videoPlayer iframe {
-    left: 0;
-    /*top: 0;*/
-    /*height: 100%;
-    width: 100%;*/
-    position: absolute;
-  }
-
+#relatedVideoContainer {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
