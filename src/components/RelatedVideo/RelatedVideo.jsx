@@ -2,7 +2,7 @@ const RelatedVideo = (props) => {
 
     return (
 
-        <div id="relatedVideoContainer">
+        <div className="flex-row">
             
             <img
                 src={props.vid.snippet.thumbnails.default.url} alt='thumbnail'

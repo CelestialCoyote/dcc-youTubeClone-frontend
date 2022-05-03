@@ -77,17 +77,16 @@ code {
 }
 
 #mainPlayerComments {
-    background-color: aqua;
+    background-color: orange;
     display: flex;
     flex-direction: column;
     width: 70%;
 }
 
 #relatedVideoContainer {
-    background-color: aquamarine;
-    border: 1px solid green;
-    display: flex;
-    flex-direction: row;
+    background-color: black;
+    border: 1px solid yellow;
+    color: white;
     width: 30%;
 }
 
@@ -98,6 +97,8 @@ code {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .relatedVideoTitleText {
