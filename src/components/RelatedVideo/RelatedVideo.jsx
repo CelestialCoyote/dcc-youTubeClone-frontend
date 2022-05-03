@@ -10,8 +10,8 @@ const RelatedVideo = (props) => {
                 height={180}
             />
 
-            <div>
-                <p>{props.vid.snippet.title}</p>
+            <div className="widthFifty">
+                <p className="relatedVideoTitleText">{props.vid.snippet.title}</p>
                 <p>{props.vid.snippet.channelTitle}</p>
 
                 <div className="flex-row">

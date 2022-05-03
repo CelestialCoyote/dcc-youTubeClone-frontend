@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import TitleBar from './components/TitleBar/TitleBar';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
-import RelatedVideo from './components/RelatedVideo/RelatedVideo';
+import RelatedVideoContainer from './components/RelatedVideoContainer/RelatedVideoContainer';
 import defaultVideo from './data/defaultVideoInfo';
 import defaultRelatedVideos from './data/defaultVideoRelatedVideos';
 
@@ -16,17 +16,12 @@ const App = () => {
     return (
         <div className="App">
             <TitleBar setYtResults={setYtResults} />
-
-            <button>Set Default</button>
             
             <div className="flex-column">
-                {/*<VideoPlayer currentVideoID={currentVideoID} setYtResults={setYtResults} ytResults={ytResults} />*/}
                 <div id="mainPlayerComments">
                     <VideoPlayer currentVideoInfo={currentVideoInfo} currentVideoID={currentVideoID} />
                 </div>
-                <ul>
-                    {ytResults.map(vid => <li> <RelatedVideo vid={vid} /> </li>)}
-                </ul>
+                <RelatedVideoContainer ytResults={ytResults} />
             </div>
             
         </div>

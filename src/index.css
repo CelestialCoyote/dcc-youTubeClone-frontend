@@ -80,12 +80,31 @@ code {
     background-color: aqua;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
 }
 
 #relatedVideoContainer {
     background-color: aquamarine;
+    border: 1px solid green;
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 30%;
+}
+
+
+/***********************
+* Remove bullets from unordered list component.
+***********************/
+
+ul {
+    list-style-type: none;
+}
+
+.relatedVideoTitleText {
+    width: 100%;
+    overflow: hidden;
+}
+
+.widthFifty {
+    width: 50%;
 }
