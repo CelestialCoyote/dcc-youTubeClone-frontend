@@ -1,14 +1,14 @@
-import useForm from '../../useForm';
-import axios from 'axios';
-import { API_KEY01 } from '../../API_KEYS';
-
-
-const SearchBar = (props) => {
-
-    const { formValues, handleChange, handleSubmit } = useForm(handleSearch);
-
-    const fakeSearchFetch = async () => {
-        await props.setYtResults([
+const searchResults = [
+    {
+        "kind": "youtube#searchListResponse",
+        "etag": "soqOFRN6_UKnuI_WDw-xyQS4Er4",
+        "nextPageToken": "CAoQAA",
+        "regionCode": "US",
+        "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 10
+        },
+        "items": [
             {
                 "kind": "youtube#searchResult",
                 "etag": "mc3q61GIoK9CzjcXVqCv8Ha8PsE",
@@ -349,43 +349,6 @@ const SearchBar = (props) => {
                     "publishTime": "2021-04-13T14:26:25Z"
                 }
             }
-        ]);
-    };
-
-    async function handleSearch() {
-        try {
-            fakeSearchFetch();
-            //console.log(formValues);
-            //await axios
-            //    .get(`https://www.googleapis.com/youtube/v3/search?q=${formValues.searchParams}&part=snippet&maxResults=10&key=${API_KEY01}`)
-            //    .then(r => { props.setYtResults(r.data.items) });
-
-        } catch (error) {
-            console.log(error.message);
-        }
-    };
-
-    return (
-
-        <form onSubmit={(e) => handleSubmit(e)}>
-            <div>
-                <label id="searchParams">Search YouTube
-                    <input
-                        aria-labelledby="searchParams"
-                        name="searchParams"
-                        placeholder="Search Text"
-                        value={formValues.searchParams}
-                        onChange={(e) => handleChange(e)} />
-                </label>
-                <label id="Seach">
-                    <input
-                        aria-labelledby="Search"
-                        type="Submit" />
-                </label>
-            </div>
-        </form>
-    );
-};
-
-
-export default SearchBar;
+        ]
+    }
+]
