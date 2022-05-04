@@ -8,9 +8,10 @@ const CommentForm = (props) => {
     return (
 
         <form onSubmit={(e) => handleSubmit(e)}>
-            <div>
-                <label id="commentText">Search YouTube
+            <div id="commentForm">
+                <label id="commentTextLabel">Add Comment
                     <input
+                        id="commentText"
                         aria-labelledby="commentText"
                         name="commentText"
                         placeholder="Comment Text"
