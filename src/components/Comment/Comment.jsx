@@ -1,9 +1,11 @@
+import CommentsContainer from "../CommentsContainer/CommentsContainer";
+
 const Comment = (props) => {
 
     return (
 
-        <div className="flex-row">
-            
+        <div className="">
+            <p>{props.comment.text}</p>
         </div>
 
     );

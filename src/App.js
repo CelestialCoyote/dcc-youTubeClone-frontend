@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import TitleBar from './components/TitleBar/TitleBar';
@@ -13,20 +13,36 @@ const App = () => {
     const [ytResults, setYtResults] = useState(defaultRelatedVideos.items);
     const [currentVideoInfo, setCurrentVideoInfo] = useState(defaultVideo);
     const [currentVideoID, setCurrentVideoID] = useState(currentVideoInfo.items[0].id);
-    const [comments, setComments] = useState(currentVideoInfo.items[0].id)
+    const [comments, setComments] = useState([]);
+
+    async function handleGetComments() {
+        try {
+            await axios
+                .get(`http://localhost:3007/api/comments/videoID/${currentVideoID}`)
+                .then(res => { setComments(res.data) });
+
+            console.log(comments);
+
+        } catch (error) {
+            console.log(error.message);
+        }
+    };
+
+    useEffect(() => { handleGetComments() }, [currentVideoID]);
+
 
     return (
         <div className="App">
             <TitleBar setYtResults={setYtResults} />
-            
+
             <div className="flex-row">
                 <div id="mainPlayerComments">
                     <VideoPlayer currentVideoInfo={currentVideoInfo} currentVideoID={currentVideoID} />
-                    <CommentsContainer currentVideoID={currentVideoID} setComments={setComments}/>
+                    <CommentsContainer  setComments={setComments} currentVideoID={currentVideoID} comments={comments} />
                 </div>
                 <RelatedVideoContainer ytResults={ytResults} />
             </div>
-            
+
         </div>
     );
 };
