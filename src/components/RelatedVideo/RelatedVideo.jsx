@@ -1,5 +1,10 @@
 const RelatedVideo = (props) => {
 
+    const imageClick = () => {
+        console.log(`Click.  Video ID = ${props.vid.id.videoId}`);
+        props.setCurrentVideoID(props.vid.id.videoId);
+    }
+
     return (
 
         <div className="flex-row">
@@ -8,6 +13,7 @@ const RelatedVideo = (props) => {
                 src={props.vid.snippet.thumbnails.default.url} alt='thumbnail'
                 width={240}
                 height={180}
+                onClick={() => imageClick()}
             />
 
             <div className="widthFifty">

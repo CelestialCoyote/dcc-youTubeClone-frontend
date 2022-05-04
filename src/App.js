@@ -40,7 +40,7 @@ const App = () => {
                     <VideoPlayer currentVideoInfo={currentVideoInfo} currentVideoID={currentVideoID} />
                     <CommentsContainer  setComments={setComments} currentVideoID={currentVideoID} comments={comments} />
                 </div>
-                <RelatedVideoContainer ytResults={ytResults} />
+                <RelatedVideoContainer setCurrentVideoID={setCurrentVideoID} ytResults={ytResults} />
             </div>
 
         </div>
