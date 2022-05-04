@@ -1,7 +1,7 @@
 import useForm from "../../useForm";
 
 
-const Comments = (props) => {
+const CommentForm = (props) => {
 
     const { formValues, handleChange, handleSubmit } = useForm(props.handleSearch);
 
@@ -9,17 +9,17 @@ const Comments = (props) => {
 
         <form onSubmit={(e) => handleSubmit(e)}>
             <div>
-                <label id="searchParams">Search YouTube
+                <label id="commentText">Search YouTube
                     <input
-                        aria-labelledby="searchParams"
-                        name="searchParams"
-                        placeholder="Search Text"
-                        value={formValues.searchParams}
+                        aria-labelledby="commentText"
+                        name="commentText"
+                        placeholder="Comment Text"
+                        value={formValues.commentText}
                         onChange={(e) => handleChange(e)} />
                 </label>
-                <label id="Seach">
+                <label id="Comment">
                     <input
-                        aria-labelledby="Search"
+                        aria-labelledby="Comment"
                         type="Submit" />
                 </label>
             </div>
@@ -28,4 +28,4 @@ const Comments = (props) => {
 };
 
 
-export default Comments;
+export default CommentForm;
