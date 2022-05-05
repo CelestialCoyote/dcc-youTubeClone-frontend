@@ -1,15 +1,14 @@
-import CommentsContainer from "../CommentsContainer/CommentsContainer";
-
 const Comment = (props) => {
 
     return (
 
-        <div className="">
+        <div className="comment flex-row">
             <p>{props.comment.text}</p>
+            <p>Date posted: {props.comment.date}</p>
         </div>
 
     );
-}
+};
  
 
 export default Comment;

@@ -15,8 +15,8 @@ const RelatedVideo = (props) => {
             await axios
                 .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoID}&key=${API_KEY01}`)
                 .then(res => { props.setCurrentVideoInfo(res.data) });
-                console.log(props.currentVideoInfo);
-            
+            console.log(props.currentVideoInfo);
+
         } catch (error) {
             console.log(error);
         }
@@ -25,7 +25,7 @@ const RelatedVideo = (props) => {
     return (
 
         <div className="flex-row">
-            
+
             <img
                 src={props.vid.snippet.thumbnails.default.url} alt='thumbnail'
                 width={240}
@@ -42,11 +42,11 @@ const RelatedVideo = (props) => {
                     <p>{props.vid.snippet.publishTime}</p>
                 </div>
             </div>
-            
+
         </div>
 
     );
-}
- 
+};
+
 
 export default RelatedVideo;

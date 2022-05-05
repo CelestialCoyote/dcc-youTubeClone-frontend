@@ -1,23 +1,17 @@
 import useForm from '../../useForm';
 import axios from 'axios';
 import { API_KEY01 } from '../../API_KEYS';
-//import searchResults from '../../data/youTubeGeneralSearch';
 
 
 const SearchBar = (props) => {
-
     const { formValues, handleChange, handleSubmit } = useForm(handleSearch);
-
-    //const fakeSearchFetch = () => {
-    //    props.setYtResults(searchResults.items);
-    //};
 
     async function handleSearch() {
         try {
             //fakeSearchFetch();
             console.log(formValues);
             await axios
-                .get(`https://www.googleapis.com/youtube/v3/search?q=${formValues.searchParams}&part=snippet&maxResults=10&key=${API_KEY01}`)
+                .get(`https://www.googleapis.com/youtube/v3/search?q=${formValues.searchParams}&part=snippet&maxResults=11&key=${API_KEY01}`)
                 .then(res => { props.setYtResults(res.data.items) });
 
         } catch (error) {

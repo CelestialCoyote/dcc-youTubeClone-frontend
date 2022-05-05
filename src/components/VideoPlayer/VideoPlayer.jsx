@@ -24,15 +24,15 @@ const VideoPlayer = (props) => {
                     <label className="infoText">{props.currentVideoInfo.items[0].statistics.dislikeCount} dislikes</label>
                 </div>
                 <div id="videoDescription" className="flex-column">
-                    <label className="infoText">{props.currentVideoInfo.items[0].snippet.channelTitle} views</label>
-                    <label className="infoText">{props.currentVideoInfo.items[0].snippet.description} views</label>
+                    <label id="channelTitle">{props.currentVideoInfo.items[0].snippet.channelTitle}</label>
+                    <label id="videoDescription">{props.currentVideoInfo.items[0].snippet.description}</label>
                 </div>
             </div>
 
         </div>
 
     );
-}
+};
 
 
 export default VideoPlayer;

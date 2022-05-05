@@ -31,6 +31,7 @@ const App = () => {
     useEffect(() => { handleGetComments() }, [currentVideoID]);
 
     return (
+
         <div className="App">
             <TitleBar setYtResults={setYtResults} />
 
@@ -47,7 +48,6 @@ const App = () => {
                     />
                 </div>
                 <RelatedVideoContainer
-                    currentVideoInfo={currentVideoInfo}
                     setCurrentVideoID={setCurrentVideoID}
                     setCurrentVideoInfo={setCurrentVideoInfo}
                     ytResults={ytResults}
