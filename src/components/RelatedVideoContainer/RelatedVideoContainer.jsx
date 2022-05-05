@@ -9,7 +9,12 @@ const RelatedVideoContainer = (props) => {
             <ul>
                 {props.ytResults.map(vid =>
                     <li key={vid.id.videoId}>
-                        <RelatedVideo setCurrentVideoID={props.setCurrentVideoID} vid={vid} />
+                        <RelatedVideo
+                            currentVideoInfo={props.currentVideoInfo}
+                            setCurrentVideoID={props.setCurrentVideoID}
+                            setCurrentVideoInfo={props.setCurrentVideoInfo}
+                            vid={vid}
+                        />
                     </li>)}
             </ul>
         </div>

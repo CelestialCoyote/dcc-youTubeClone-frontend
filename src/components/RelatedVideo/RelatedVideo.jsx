@@ -1,9 +1,26 @@
+import axios from "axios";
+import { API_KEY01 } from '../../API_KEYS';
+
+
 const RelatedVideo = (props) => {
 
     const imageClick = () => {
         console.log(`Click.  Video ID = ${props.vid.id.videoId}`);
         props.setCurrentVideoID(props.vid.id.videoId);
+        handleGetVideoInfo(props.vid.id.videoId);
     }
+
+    async function handleGetVideoInfo(videoID) {
+        try {
+            await axios
+                .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoID}&key=${API_KEY01}`)
+                .then(res => { props.setCurrentVideoInfo(res.data) });
+                console.log(props.currentVideoInfo);
+            
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     return (
 

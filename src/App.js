@@ -30,17 +30,28 @@ const App = () => {
 
     useEffect(() => { handleGetComments() }, [currentVideoID]);
 
-
     return (
         <div className="App">
             <TitleBar setYtResults={setYtResults} />
 
             <div className="flex-row">
                 <div id="mainPlayerComments">
-                    <VideoPlayer currentVideoInfo={currentVideoInfo} currentVideoID={currentVideoID} />
-                    <CommentsContainer  setComments={setComments} currentVideoID={currentVideoID} comments={comments} />
+                    <VideoPlayer
+                        currentVideoInfo={currentVideoInfo}
+                        currentVideoID={currentVideoID}
+                    />
+                    <CommentsContainer
+                        setComments={setComments}
+                        currentVideoID={currentVideoID}
+                        comments={comments}
+                    />
                 </div>
-                <RelatedVideoContainer setCurrentVideoID={setCurrentVideoID} ytResults={ytResults} />
+                <RelatedVideoContainer
+                    currentVideoInfo={currentVideoInfo}
+                    setCurrentVideoID={setCurrentVideoID}
+                    setCurrentVideoInfo={setCurrentVideoInfo}
+                    ytResults={ytResults}
+                />
             </div>
 
         </div>
